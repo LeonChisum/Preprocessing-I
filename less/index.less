@@ -54,6 +54,155 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
 }
 
+.container{
+	width: 1000px;
+	margin: 0 auto;
+	@media(max-width: 500px){
+		width: 100%;
+	}
+}
+
+// Mixins & Variables
+.flexbox{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.content-setup{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 40px 20px 0 20px;
+	border: .5rem solid #695958;
+	border-radius: 1rem;
+}
+
+.headings{
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+@background-color: #8fbc8f;
+@main-color: #FFFFFF;
+@background-color2: #E2EFDE;
+
+.links{
+	text-decoration: none;
+	color: @main-color;
+}
+
+// Header & Nav
+header{
+	width: 100%;
+	padding-top: 15px;
+	background-color: @background-color;
+	.flexbox();
+
+	nav{
+		.flexbox;
+		width: 40%;
+		a{
+			font-size: 1.1rem;
+			.links();
+		}
+	}
+
+	p{
+		font-size: 3rem;
+		color: black;
+	}
+	@media (max-width: 500px){
+		
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 50%;
+	}
+}
+
+// Top content with selfie
+.top-content{
+	display: flex;
+	justify-content: space-evenly;
+	height: 40vh;
+	background-color: @background-color2;
+	img{
+		width:30%;
+		height: 100%;
+		padding: 15px;
+		border-radius: 25px;
+		box-shadow: -.3rem .2rem @background-color;
+	}
+	h1{
+		.headings;
+		padding: 20px 0;
+	}
+	ul{
+		margin-left: 30px;
+		li{
+			list-style-type: square;
+			padding: 10px 0;
+		}
+	}
+	@media (max-width: 500px){
+
+	
+	}
+}
+
+//Main Content
+.main-content{
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	height: 500px;
+	background-color: @background-color2;
+	h2{
+		.headings;
+	}
+}
+
+.skills{
+	.content-setup;
+	p{
+		padding-top: 30px;
+		line-height: 2rem;
+	}
+
+}
+
+.experience{
+	.content-setup;
+	width: 40%;
+	p{
+		padding: 20px 0;
+		a{
+			.links;
+			color: black;
+			text-decoration: underline;
+		}
+	}
+	address{
+		padding: 20px 0;
+		a{
+			.links;
+			color: black;
+			text-decoration: underline;
+		}
+	}
+}
+
+footer{
+	background-color: @background-color;
+	height: 40px;
+	text-align: center;
+	p{
+		a{
+			.links;
+		}
+	}
+}
