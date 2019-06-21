@@ -140,7 +140,8 @@ body {
 }
 @media (max-width: 500px) {
   .container {
-    width: 100%;
+    width: 95%;
+    margin: 0 5% 0 5%;
   }
 }
 .flexbox {
@@ -174,6 +175,14 @@ header {
   justify-content: space-evenly;
   align-items: center;
 }
+@media (max-width: 500px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
 header nav {
   display: flex;
   flex-direction: row;
@@ -181,28 +190,37 @@ header nav {
   align-items: center;
   width: 40%;
 }
+@media (max-width: 500px) {
+  header nav {
+    width: 100%;
+    padding: 15px 0;
+  }
+}
 header nav a {
   font-size: 1.1rem;
   text-decoration: none;
   color: #FFFFFF;
 }
+@media (max-width: 500px) {
+  header nav a {
+    letter-spacing: 1px;
+  }
+}
 header p {
   font-size: 3rem;
-  color: black;
-}
-@media (max-width: 500px) {
-  header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-  }
+  color: #695958;
 }
 .top-content {
   display: flex;
   justify-content: space-evenly;
-  height: 40vh;
+  margin: 15px 0;
   background-color: #E2EFDE;
+}
+@media (max-width: 500px) {
+  .top-content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }
 .top-content img {
   width: 30%;
@@ -211,6 +229,18 @@ header p {
   border-radius: 25px;
   box-shadow: -0.3rem 0.2rem #8fbc8f;
 }
+@media (max-width: 500px) {
+  .top-content img {
+    width: 50%;
+    height: 200px;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 500px) {
+  .top-content .list {
+    padding: 5px 10px;
+  }
+}
 .top-content h1 {
   font-size: 1.5rem;
   font-weight: bold;
@@ -218,6 +248,11 @@ header p {
 }
 .top-content ul {
   margin-left: 30px;
+}
+@media (max-width: 500px) {
+  .top-content ul {
+    margin-left: 0;
+  }
 }
 .top-content ul li {
   list-style-type: square;
@@ -228,11 +263,18 @@ header p {
   justify-content: center;
   align-items: stretch;
   height: 500px;
+  margin-bottom: 15px;
   background-color: #E2EFDE;
 }
 .main-content h2 {
   font-size: 1.5rem;
   font-weight: bold;
+}
+@media (max-width: 500px) {
+  .main-content {
+    flex-direction: column;
+    height: auto;
+  }
 }
 .skills {
   display: flex;
@@ -255,8 +297,20 @@ header p {
   border-radius: 1rem;
   width: 40%;
 }
+@media (max-width: 500px) {
+  .experience {
+    width: 100%;
+    flex-flow: row wrap;
+    padding: 15px;
+  }
+}
 .experience p {
   padding: 20px 0;
+}
+@media (max-width: 500px) {
+  .experience p {
+    padding: 10px;
+  }
 }
 .experience p a {
   text-decoration: none;
@@ -266,10 +320,13 @@ header p {
 }
 .experience address {
   padding: 20px 0;
+  text-transform: uppercase;
+  font-size: 0.8rem;
 }
 .experience address a {
   text-decoration: none;
   color: #FFFFFF;
+  padding: 10px 0;
   color: black;
   text-decoration: underline;
 }
