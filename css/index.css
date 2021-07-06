@@ -1,1 +1,341 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .container {
+    width: 95%;
+    margin: 0 5% 0 5%;
+  }
+}
+.flexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.content-setup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 0 20px;
+  border: 0.5rem solid #695958;
+  border-radius: 1rem;
+}
+.headings {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.links {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+header {
+  width: 100%;
+  padding-top: 15px;
+  background-color: #8fbc8f;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media (max-width: 500px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+header nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 40%;
+}
+@media (max-width: 500px) {
+  header nav {
+    width: 100%;
+    padding: 15px 0;
+  }
+}
+header nav a {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+@media (max-width: 500px) {
+  header nav a {
+    letter-spacing: 1px;
+  }
+}
+header p {
+  font-size: 3rem;
+  color: #695958;
+}
+.top-content {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 15px 0;
+  background-color: #E2EFDE;
+}
+@media (max-width: 500px) {
+  .top-content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+.top-content img {
+  width: 30%;
+  height: 100%;
+  padding: 15px;
+  border-radius: 25px;
+  box-shadow: -0.3rem 0.2rem #8fbc8f;
+}
+@media (max-width: 500px) {
+  .top-content img {
+    width: 50%;
+    height: 200px;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 500px) {
+  .top-content .list {
+    padding: 5px 10px;
+  }
+}
+.top-content h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 20px 0;
+}
+.top-content ul {
+  margin-left: 30px;
+}
+@media (max-width: 500px) {
+  .top-content ul {
+    margin-left: 0;
+  }
+}
+.top-content ul li {
+  list-style-type: square;
+  padding: 10px 0;
+}
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  height: 500px;
+  margin-bottom: 15px;
+  background-color: #E2EFDE;
+}
+.main-content h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+@media (max-width: 500px) {
+  .main-content {
+    flex-direction: column;
+    height: auto;
+  }
+}
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 0 20px;
+  border: 0.5rem solid #695958;
+  border-radius: 1rem;
+}
+.skills p {
+  padding-top: 30px;
+  line-height: 2rem;
+}
+.experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px 0 20px;
+  border: 0.5rem solid #695958;
+  border-radius: 1rem;
+  width: 40%;
+}
+@media (max-width: 500px) {
+  .experience {
+    width: 100%;
+    flex-flow: row wrap;
+    padding: 15px;
+  }
+}
+.experience p {
+  padding: 20px 0;
+}
+@media (max-width: 500px) {
+  .experience p {
+    padding: 10px;
+  }
+}
+.experience p a {
+  text-decoration: none;
+  color: #FFFFFF;
+  color: black;
+  text-decoration: underline;
+}
+.experience address {
+  padding: 20px 0;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.experience address a {
+  text-decoration: none;
+  color: #FFFFFF;
+  padding: 10px 0;
+  color: black;
+  text-decoration: underline;
+}
+footer {
+  background-color: #8fbc8f;
+  height: 40px;
+  text-align: center;
+}
+footer p a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
